@@ -1,0 +1,170 @@
+# Site settings
+title: TomHKS的博客
+SEOTitle: TomHKS的博客 | TomHKS Blog
+header-img: img/home-bg.jpg
+email: z7788126@163.com
+description: ""
+keyword: ""
+url: "https://tomhks.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+RSS: true
+weibo_username:     demo
+#zhihu_username:    demo
+github_username:    zhangweibo7788
+#twitter_username:   demo
+#facebook_username:  huxpro
+#linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+keep_files: ["errno-404"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+# MeingJS support for Aplayer
+# reference: https://github.com/metowolf/MetingJS & https://github.com/MoePlayer/APlayer
+MetingJs: true
+server: netease  # music platform: netease, tencent, kugou, xiami, baidu
+type: playlist  # song, playlist, album, search, artist
+id: 3060219358  # song id / playlist id / album id / search keyword
+fixed: true
+mini: true
+autoplay: true
+loop: all  # player loop play, values: 'all', 'one', 'none'
+order: random  # player play order, values: 'list', 'random'
+volume: 0.7  # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
+lrc-tye: 0
+list-folded: false  # indicate whether list should folded at first
+list-max-height: 220px  # list max height
+
+
+# APlayer CDN
+# reference: https://github.com/metowolf/MetingJS#cdn
+#Meting.min.js: https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js
+# APlayer.min.css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+# APlayer.min.js: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+APlayerCss: /css/APlayer.min.css  # /css/APlayer.min.css
+APlayerJs: /js/APlayer.min.js   # /js/APlayer.min.js
+
+# Custom CDN
+# font-awesome.min.css: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css
+# font-awesome.min.css: https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+#fastclick.min.js: https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
+#anchor.min.js: https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js
+font-awesome: /css/font-awesome.min.css   # /css/font-awesome.min.css
+fastclick: /js/fastclick.min.js  # /js/fastclick.min.js
+anchorcdn: /js/anchor.min.js  # /js/anchor.min.js
+
+
+# Disqus settings
+#disqus_username: zclee
+
+# Livere settings
+livere_uid: MTAyMC80NzQyMC8yMzkyMA==
+
+# Netease settings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/avatar-zclee.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+
+# Jekyll Rake Boilerplate
+# reference: https://github.com/gummesson/jekyll-rake-boilerplate
+# reference: https://github.com/nicejade/nice-jade-collecting#nice-practical-script
+post:
+  template: _post.txt
+  extension: md
+page:
+  template: _page.txt
+  extension: md
+editor: vim
+git:
+  branch: master
+transfer:
+  command: rsync
+  settings: -av
+  source: _site/
+  destination: ~/.ssh/test_site/
+
+# Friends
+friends: [
+      {
+        title: "Annie",
+        href: "https://anniepzk.cn/"
+    },{
+        title: "这个年纪",
+        href: "https://blog.leezc.cn/"
+    },{
+        title: "静静养一只月亮",
+        href: "https://leezc.cn/"
+    }
+]
